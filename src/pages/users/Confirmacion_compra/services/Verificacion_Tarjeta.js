@@ -37,7 +37,6 @@ const CheckoutForm = (props) => {
 
 	const [ name, setName ] = useState('');
 	const [ postal, setPostal ] = useState('');
-	/* 	const [ loading, setLoading ] = useState(false); */
 
 	const [ typeCard, setTypeCard ] = useState('visa');
 	const [ numbrerCard, setNumbrerCard ] = useState('');
