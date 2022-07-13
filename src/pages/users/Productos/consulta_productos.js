@@ -80,12 +80,12 @@ function ConsultaProductos(props) {
 
 	return (
 		<Spin spinning={loading}>
-			<div className={"contenedor-home-background " + classes.background}>
+			{/* <div className={"contenedor-home-background " + classes.background}>
 				<div className="row float-left">
 					<p className="font-prin mb-0 text-center text-color">¡Conoce nuestros productos!</p>
 				</div>
-			</div>
-			<div className="d-flex justify-content-center align-items-center">
+			</div> */}
+			<div className="d-flex justify-content-center align-items-center mt-4">
 				<div className="">
 					<Row gutter={10} style={{ maxWidth: '95vw' }} className=" mt-4">
 						{render}
