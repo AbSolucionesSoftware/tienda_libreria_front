@@ -91,7 +91,7 @@ const Categorias = (props) => {
 		);
 	});
 
-	const temporadas_nav = datosContx.navbar.temporadas.map((temporada, index) => {
+	/* const temporadas_nav = datosContx.navbar.temporadas.map((temporada, index) => {
 		if (temporada._id) {
 			return (
 				<Menu.Item
@@ -109,9 +109,9 @@ const Categorias = (props) => {
 			);
 		}
 		return null;
-	});
+	}); */
 
-	const categorias_generos = datosContx.navbar.genero.map((generos) => {
+	/* const categorias_generos = datosContx.navbar.genero.map((generos) => {
 		return (
 			<Menu.Item
 				className="font-cates"
@@ -126,7 +126,7 @@ const Categorias = (props) => {
 				{generos._id}
 			</Menu.Item>
 		);
-	});
+	}); */
 
 	return (
 		<Layout className="container-subcategorias-nav d-lg-inline size-layout-cat">
@@ -139,7 +139,7 @@ const Categorias = (props) => {
 				triggerSubMenuAction="click"
 			>
 				{categorias_nav}
-				{datosContx.navbar.temporadas.length === 1 && datosContx.navbar.temporadas[0]._id === '' ? null : (
+				{/* {datosContx.navbar.temporadas.length === 1 && datosContx.navbar.temporadas[0]._id === '' ? null : (
 					<SubMenu
 						title="Temporadas"
 						className={
@@ -151,8 +151,8 @@ const Categorias = (props) => {
 					>
 						{temporadas_nav}
 					</SubMenu>
-				)}
-				{datosContx.navbar.genero.length === 1 && datosContx.navbar.genero[0]._id === 'Ninguno' ? null : (
+				)} */}
+				{/* {datosContx.navbar.genero.length === 1 && datosContx.navbar.genero[0]._id === 'Ninguno' ? null : (
 					<SubMenu
 					title="Género"
 					className={
@@ -174,7 +174,7 @@ const Categorias = (props) => {
 					</Menu.Item>
 					{categorias_generos}
 				</SubMenu>
-				)}
+				)} */}
 			</Menu>
 		</Layout>
 	);
