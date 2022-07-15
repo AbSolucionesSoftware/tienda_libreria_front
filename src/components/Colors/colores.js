@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Button, notification, Popover, Radio, Space } from 'antd';
-import { FormatPainterOutlined } from '@ant-design/icons';
+import { BgColorsOutlined } from '@ant-design/icons';
 import { MenuContext } from '../../context/carritoContext';
 import { SketchPicker } from 'react-color';
 import { Fragment } from 'react';
@@ -260,6 +260,7 @@ export default function ColorCustomizer() {
 				}
 			})
 			.then((res) => {
+				console.log(res)
 				setLoading(false);
 				notification.success({
 					message: 'Cambios realizados',
@@ -287,10 +288,11 @@ export default function ColorCustomizer() {
 		},
 		button_size: {
 			height: '70px',
-			width: '70px'
+			width: '70px',
+			boxShadow: '0px 10px 21px -8px rgba(128,128,128,1)'
 		},
 		icon_size: {
-			fontSize: '30px'
+			fontSize: '32px'
 		},
 		radio_style: {
 			display: 'block',
@@ -400,10 +402,11 @@ export default function ColorCustomizer() {
 					onVisibleChange={() => handleVisibleChange()}
 				>
 					<Button
+						disabled={!datosContx.lengt || (datosContx.length && !datosContx.tienda.length)}
 						type="primary"
 						style={styles.button_size}
 						shape="circle"
-						icon={<FormatPainterOutlined style={styles.icon_size} />}
+						icon={<BgColorsOutlined style={styles.icon_size} />}
 					/>
 				</Popover>
 			</div>
